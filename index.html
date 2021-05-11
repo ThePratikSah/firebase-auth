@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase auth</title>
+  </head>
+  <body>
+    <div id="signupDiv">
+      <input type="email" id="email" />
+      <input type="password" id="password" />
+      <button id="btnSignup">Sign Up</button>
+      <button id="btnSignIn">Sign In</button>
+    </div>
+
+    <div id="loader" class="loader"></div>
+
+    <div id="userData" style="display: none">
+      <input type="text" placeholder="Enter your name" />
+      <button id="updateName">Update Name</button>
+      <p id="name"></p>
+      <p id="email"></p>
+      <button id="signOut">Sign Out</button>
+    </div>
+
+    <style>
+      .loader {
+        display: none;
+        border: 5px solid #dddddd; /* Light grey */
+        border-top: 5px solid #7a29e4; /* Blue */
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        animation: spin 1s linear infinite;
+        margin: 10px auto;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
